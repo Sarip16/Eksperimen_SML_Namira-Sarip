@@ -19,6 +19,9 @@ def run_preprocessing():
     except FileNotFoundError:
         df = pd.read_csv('credit_risk_dataset.csv')
 
+    # Menghapus Duplikat
+    df.drop_duplicates(inplace=True)
+
     # Menangani Outlier
     df_clean = df[(df['person_age'] <= 80) & (df['person_income'] <= 4000000)].copy()
 
