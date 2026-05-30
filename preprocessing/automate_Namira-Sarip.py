@@ -19,7 +19,7 @@ def run_preprocessing():
     except FileNotFoundError:
         df = pd.read_csv('credit_risk_dataset.csv')
 
-    # Menghapus Duplikat
+    # Menghapus Duplikatt
     df.drop_duplicates(inplace=True)
 
     # Menangani Outlier
